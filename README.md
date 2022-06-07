@@ -1,2 +1,2 @@
 # weather-app
-A simple weather app. More updates to come.
+A simple react weather app. More updates to come.
