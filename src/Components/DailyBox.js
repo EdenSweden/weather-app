@@ -9,7 +9,7 @@ export default function DailyBox() {
     <>
     <Weekday />
     <WeatherIcon />
-    <div>
+    <div style={{'display': 'flex', 'flex-direction': 'row', 'justify-content': 'space-around'}}>
         <MaxTemp /> 
         <MinTemp />
     </div>

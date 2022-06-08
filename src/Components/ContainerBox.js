@@ -10,11 +10,6 @@ const boxStyles = {
     'color': 'black'
 }
 
-const dailyBoxStyles = {
-    'display': 'grid',
-    'grid-template-rows': '1fr 3fr 1fr'
-}
-
 /*const getData = async () => {
     //Minneapolis weather:
     try {
@@ -40,6 +35,11 @@ const resultData = getData()
 
 console.log('resultData:'); // returns a promise only
 console.log(resultData);*/
+
+const dailyBoxStyles = {
+    'display': 'grid',
+    'grid-template-rows': '1fr 5fr 1fr'
+}
 
 export default function ContainerBox() {
 
