@@ -4,15 +4,20 @@ import WeatherIcon from './WeatherIcon';
 import MaxTemp from './MaxTemp';
 import MinTemp from './MinTemp';
 
-export default function DailyBox() {
+export default function DailyBox({loading, displayData }) {
+
   return (
     <>
     <Weekday />
-    <WeatherIcon />
-    <div style={{'display': 'flex', 'flex-direction': 'row', 'justify-content': 'space-around'}}>
-        <MaxTemp /> 
-        <MinTemp />
-    </div>
+    { loading ? 'Loading...' : 
+    <div>
+      <WeatherIcon weatherIcon={displayData.weatherIcon} />
+      <div style={{'display': 'flex', 'flexDirection': 'row', 'justifyContent': 'space-around'}}>
+          <MaxTemp maxTemp={displayData.maxTemp} />
+          <MinTemp minTemp={displayData.minTemp}/>
+      </div>
+    </div>}
+
     </>
   )
 }
